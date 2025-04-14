@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import "./slider.css"
-import "./index.css"; // Asegúrate de tener un archivo CSS para estilos adicionales
+import "./index.css"; 
+import marco from "../src/assets/img/marcoplinplin.png"// Asegúrate de tener un archivo CSS para estilos adicionales
 
 const PhotoSlideshow = () => {
   const [photos, setPhotos] = useState([]);
@@ -72,7 +73,7 @@ const PhotoSlideshow = () => {
           }}
         />
         <img className="border border-2 border-primary rounded-3"
-          src="../src/assets/img/marcoplinplin.png" // Ajustá la ruta según corresponda
+          src={marco}// Ajustá la ruta según corresponda
           alt="Marco decorativo"
           style={{
             position: "absolute",
