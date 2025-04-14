@@ -72,7 +72,7 @@ const PhotoSlideshow = () => {
           }}
         />
         <img className="border border-2 border-primary rounded-3"
-          src="../public/marcoplinplin.png" // Ajustá la ruta según corresponda
+          src="../src/assets/img/marcoplinplin.png" // Ajustá la ruta según corresponda
           alt="Marco decorativo"
           style={{
             position: "absolute",
