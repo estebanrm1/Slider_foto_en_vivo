@@ -53,57 +53,28 @@ const PhotoSlideshow = () => {
 
   return (
     <>
-    <h1 className="mt-5"><span>Mi primer añito</span> <span>Lorenzo</span></h1>
+    <h1 className="my-5"><span>Mi primer añito</span> <span>Lorenzo</span></h1>
     <Container className="d-flex flex-column justify-content-center align-items-center" style={{ height: "75vh" }}>
       {/* 📸 Foto con marco */}
-        
-      <div style={{ position: "relative", width: "400px", height: "600px", }}>
-        <img
-          src={currentPhoto.imageUrl}
-          alt="Foto proyectada"
-          style={{
-            position: "absolute",
-            top: "5%",
-            left: "10%",
-            width: "80%",
-            height: "95%",
-            objectFit: "cover",
-            borderRadius: "10px",
-            zIndex: 1,
-          }}
-        />
-        <img className="border border-2 border-primary rounded-3"
-          src={marco}// Ajustá la ruta según corresponda
-          alt="Marco decorativo"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "105%",
-            zIndex: 2,
-          }}
-        />
-      </div>
-      {currentPhoto.comment && (
-          <div
-          className="comentario border border-2 border-primary rounded-3"
-            style={{
-              position: "absolute",
-              bottom: "400px",
-              left: "956px",
-              backgroundColor: "rgb(250, 219, 42)",
-              padding: "6px 12px",
-              borderRadius: "6px",
-              fontSize: "20px",
-              color: "rgb(0, 81, 255)",
-              textAlign: "center",
-              zIndex: 3
-            }}
-          >
-            {currentPhoto.comment}
-          </div>
-        )}
+
+<div className="slider-container">
+  <img
+    src={currentPhoto.imageUrl}
+    alt="Foto proyectada"
+    className="slider-image"
+  />
+  <img
+    src={marco}
+    alt="Marco decorativo"
+    className="slider-frame rounded-3"
+  />
+</div>
+
+{currentPhoto.comment && (
+  <div className="comment-box">
+    {currentPhoto.comment}
+  </div>
+)}
       {/* 💬 Comentario */}
     </Container>
     </>
